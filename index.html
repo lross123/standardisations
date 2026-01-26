@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="background-glow"></div>
-    
+
     <header>
-        <div class="logo">JWA STANDARDS</div>
+        <div class="logo"></div>
         <h1>Metric Conversion Dashboard</h1>
     </header>
 
@@ -25,47 +27,53 @@
                 <div class="icon">📏</div>
                 <h2>Length</h2>
             </div>
-            <div class="input-group">
-                <label for="inches">Inches</label>
-                <input type="number" id="inches" placeholder="0" oninput="convertLength('inches')">
-            </div>
-            <div class="input-group">
-                <label for="feet">Feet</label>
-                <input type="number" id="feet" placeholder="0" oninput="convertLength('feet')">
-            </div>
-            <div class="divider">=</div>
-            <div class="input-group">
-                <label for="mm">Millimeters</label>
-                <input type="number" id="mm" placeholder="0" oninput="convertLength('mm')">
-            </div>
-            <div class="input-group">
-                <label for="meters">Meters</label>
-                <input type="number" id="meters" placeholder="0" oninput="convertLength('meters')">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="mm">Millimeters (mm)</label>
+                    <input type="number" id="mm" placeholder="0" oninput="convertLength('mm')">
+                </div>
+                <div class="input-group">
+                    <label for="cm">Centimeters (cm)</label>
+                    <input type="number" id="cm" placeholder="0" oninput="convertLength('cm')">
+                </div>
+                <div class="input-group">
+                    <label for="meters">Meters (m)</label>
+                    <input type="number" id="meters" placeholder="0" oninput="convertLength('meters')">
+                </div>
+                <div class="input-group">
+                    <label for="km">Kilometers (km)</label>
+                    <input type="number" id="km" placeholder="0" oninput="convertLength('km')">
+                </div>
+                <div class="input-group">
+                    <label for="inches">Inches (in)</label>
+                    <input type="number" id="inches" placeholder="0" oninput="convertLength('inches')">
+                </div>
+                <div class="input-group">
+                    <label for="feet">Feet (ft)</label>
+                    <input type="number" id="feet" placeholder="0" oninput="convertLength('feet')">
+                </div>
             </div>
         </section>
 
-        <!-- Weight Section -->
+        <!-- Area Section -->
         <section class="converter-card">
             <div class="card-header">
-                <div class="icon">⚖️</div>
-                <h2>Weight</h2>
+                <div class="icon">⬜</div>
+                <h2>Area</h2>
             </div>
-            <div class="input-group">
-                <label for="lbs">Pounds (lb)</label>
-                <input type="number" id="lbs" placeholder="0" oninput="convertWeight('lbs')">
-            </div>
-            <div class="input-group">
-                <label for="oz">Ounces (oz)</label>
-                <input type="number" id="oz" placeholder="0" oninput="convertWeight('oz')">
-            </div>
-            <div class="divider">=</div>
-            <div class="input-group">
-                <label for="kg">Kilograms</label>
-                <input type="number" id="kg" placeholder="0" oninput="convertWeight('kg')">
-            </div>
-            <div class="input-group">
-                <label for="grams">Grams</label>
-                <input type="number" id="grams" placeholder="0" oninput="convertWeight('grams')">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="sqmm">Square Millimeters (mm²)</label>
+                    <input type="number" id="sqmm" placeholder="0" oninput="convertArea('sqmm')">
+                </div>
+                <div class="input-group">
+                    <label for="sqm">Square Meters (m²)</label>
+                    <input type="number" id="sqm" placeholder="0" oninput="convertArea('sqm')">
+                </div>
+                <div class="input-group">
+                    <label for="sqft">Square Feet (ft²)</label>
+                    <input type="number" id="sqft" placeholder="0" oninput="convertArea('sqft')">
+                </div>
             </div>
         </section>
 
@@ -75,22 +83,195 @@
                 <div class="icon">💧</div>
                 <h2>Volume</h2>
             </div>
-            <div class="input-group">
-                <label for="gallons">Gallons (US)</label>
-                <input type="number" id="gallons" placeholder="0" oninput="convertVolume('gallons')">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="ml">Milliliters (ml)</label>
+                    <input type="number" id="ml" placeholder="0" oninput="convertVolume('ml')">
+                </div>
+                <div class="input-group">
+                    <label for="liters">Liters (L)</label>
+                    <input type="number" id="liters" placeholder="0" oninput="convertVolume('liters')">
+                </div>
+                <div class="input-group">
+                    <label for="cm3">Cubic Centimeters (cm³)</label>
+                    <input type="number" id="cm3" placeholder="0" oninput="convertVolume('cm3')">
+                </div>
+                <div class="input-group">
+                    <label for="m3">Cubic Meters (m³)</label>
+                    <input type="number" id="m3" placeholder="0" oninput="convertVolume('m3')">
+                </div>
+                <div class="input-group">
+                    <label for="ft3">Cubic Feet (ft³)</label>
+                    <input type="number" id="ft3" placeholder="0" oninput="convertVolume('ft3')">
+                </div>
+                <div class="input-group">
+                    <label for="us_gal">Gallons (US)</label>
+                    <input type="number" id="us_gal" placeholder="0" oninput="convertVolume('us_gal')">
+                </div>
+                <div class="input-group">
+                    <label for="uk_gal">Gallons (UK)</label>
+                    <input type="number" id="uk_gal" placeholder="0" oninput="convertVolume('uk_gal')">
+                </div>
             </div>
-            <div class="divider">=</div>
-            <div class="input-group">
-                <label for="liters">Liters</label>
-                <input type="number" id="liters" placeholder="0" oninput="convertVolume('liters')">
+        </section>
+
+        <!-- Mass Section -->
+        <section class="converter-card">
+            <div class="card-header">
+                <div class="icon">⚖️</div>
+                <h2>Mass & Force</h2>
+            </div>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="grams">Grams (g)</label>
+                    <input type="number" id="grams" placeholder="0" oninput="convertMass('grams')">
+                </div>
+                <div class="input-group">
+                    <label for="kg">Kilograms (kg)</label>
+                    <input type="number" id="kg" placeholder="0" oninput="convertMass('kg')">
+                </div>
+                <div class="input-group">
+                    <label for="tonnes">Tonnes (Metric)</label>
+                    <input type="number" id="tonnes" placeholder="0" oninput="convertMass('tonnes')">
+                </div>
+                <div class="input-group">
+                    <label for="oz">Ounces (oz)</label>
+                    <input type="number" id="oz" placeholder="0" oninput="convertMass('oz')">
+                </div>
+                <div class="input-group">
+                    <label for="lbs">Pounds (lb)</label>
+                    <input type="number" id="lbs" placeholder="0" oninput="convertMass('lbs')">
+                </div>
+            </div>
+        </section>
+        <!-- Force Section -->
+        <section class="converter-card">
+            <div class="card-header">
+                <div class="icon">💪</div>
+                <h2>Force</h2>
+            </div>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="newtons">Newtons (N)</label>
+                    <input type="number" id="newtons" placeholder="0" oninput="convertForce('newtons')">
+                </div>
+                <div class="input-group">
+                    <label for="kilonewtons">Kilonewtons (kN)</label>
+                    <input type="number" id="kilonewtons" placeholder="0" oninput="convertForce('kilonewtons')">
+                </div>
+                <div class="input-group">
+                    <label for="lbf">Pounds-Force (lbf)</label>
+                    <input type="number" id="lbf" placeholder="0" oninput="convertForce('lbf')">
+                </div>
+            </div>
+        </section>
+
+        <!-- Pressure Section -->
+        <section class="converter-card">
+            <div class="card-header">
+                <div class="icon">🔽</div>
+                <h2>Pressure</h2>
+            </div>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="pascals">Pascals (Pa)</label>
+                    <input type="number" id="pascals" placeholder="0" oninput="convertPressure('pascals')">
+                </div>
+                <div class="input-group">
+                    <label for="kpa">Kilopascals (kPa)</label>
+                    <input type="number" id="kpa" placeholder="0" oninput="convertPressure('kpa')">
+                </div>
+                <div class="input-group">
+                    <label for="bar">Bar</label>
+                    <input type="number" id="bar" placeholder="0" oninput="convertPressure('bar')">
+                </div>
+                <div class="input-group">
+                    <label for="psi">PSI (lb/in²)</label>
+                    <input type="number" id="psi" placeholder="0" oninput="convertPressure('psi')">
+                </div>
+                <div class="input-group">
+                    <label for="atm">Atmospheres (atm)</label>
+                    <input type="number" id="atm" placeholder="0" oninput="convertPressure('atm')">
+                </div>
+            </div>
+        </section>
+
+        <!-- Energy Section -->
+        <section class="converter-card">
+            <div class="card-header">
+                <div class="icon">⚡</div>
+                <h2>Energy</h2>
+            </div>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="joules">Joules (J)</label>
+                    <input type="number" id="joules" placeholder="0" oninput="convertEnergy('joules')">
+                </div>
+                <div class="input-group">
+                    <label for="kj">Kilojoules (kJ)</label>
+                    <input type="number" id="kj" placeholder="0" oninput="convertEnergy('kj')">
+                </div>
+                <div class="input-group">
+                    <label for="kwh">Kilowatt-hour (kWh)</label>
+                    <input type="number" id="kwh" placeholder="0" oninput="convertEnergy('kwh')">
+                </div>
+                <div class="input-group">
+                    <label for="btu">BTU</label>
+                    <input type="number" id="btu" placeholder="0" oninput="convertEnergy('btu')">
+                </div>
+            </div>
+        </section>
+
+        <!-- Power Section -->
+        <section class="converter-card">
+            <div class="card-header">
+                <div class="icon">🔌</div>
+                <h2>Power</h2>
+            </div>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="watts">Watts (W)</label>
+                    <input type="number" id="watts" placeholder="0" oninput="convertPower('watts')">
+                </div>
+                <div class="input-group">
+                    <label for="kw">Kilowatts (kW)</label>
+                    <input type="number" id="kw" placeholder="0" oninput="convertPower('kw')">
+                </div>
+                <div class="input-group">
+                    <label for="hp">Horsepower (hp)</label>
+                    <input type="number" id="hp" placeholder="0" oninput="convertPower('hp')">
+                </div>
+            </div>
+        </section>
+
+        <!-- Speed Section -->
+        <section class="converter-card">
+            <div class="card-header">
+                <div class="icon">🚀</div>
+                <h2>Speed</h2>
+            </div>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="mps">Meters/Sec (m/s)</label>
+                    <input type="number" id="mps" placeholder="0" oninput="convertSpeed('mps')">
+                </div>
+                <div class="input-group">
+                    <label for="kmh">Km/Hour (km/h)</label>
+                    <input type="number" id="kmh" placeholder="0" oninput="convertSpeed('kmh')">
+                </div>
+                <div class="input-group">
+                    <label for="mph">Miles/Hour (mph)</label>
+                    <input type="number" id="mph" placeholder="0" oninput="convertSpeed('mph')">
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Part of the Standardisations Initiative</p>
+        <p></p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>

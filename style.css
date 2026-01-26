@@ -1,10 +1,12 @@
 :root {
-    --bg-color: #0B0E14; /* Deep, dark blue-black */
+    --bg-color: #0B0E14;
+    /* Deep, dark blue-black */
     --card-bg: rgba(255, 255, 255, 0.03);
     --card-border: rgba(255, 255, 255, 0.1);
     --text-primary: #FFFFFF;
     --text-secondary: #94A3B8;
-    --accent: #38BDF8; /* Sky blue accent */
+    --accent: #38BDF8;
+    /* Sky blue accent */
     --accent-glow: rgba(56, 189, 248, 0.3);
     --input-bg: rgba(0, 0, 0, 0.2);
     --font-main: 'Outfit', sans-serif;
@@ -91,9 +93,17 @@ h1 {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.converter-card:nth-child(1) { animation-delay: 0.1s; }
-.converter-card:nth-child(2) { animation-delay: 0.2s; }
-.converter-card:nth-child(3) { animation-delay: 0.3s; }
+.converter-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.converter-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.converter-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
 
 .card-header {
     display: flex;
@@ -161,16 +171,42 @@ footer {
 }
 
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    .dashboard-container { grid-template-columns: 1fr; }
+    h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* New Grid for denser inputs */
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
 }
