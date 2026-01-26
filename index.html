@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWA Standards | Unit Converter</title>
+    <meta name="description" content="Sleek Imperial to Metric conversion dashboard for JWA Standards.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <header>
+        <div class="logo">JWA STANDARDS</div>
+        <h1>Metric Conversion Dashboard</h1>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Length Section -->
+        <section class="converter-card">
+            <div class="card-header">
+                <div class="icon">📏</div>
+                <h2>Length</h2>
+            </div>
+            <div class="input-group">
+                <label for="inches">Inches</label>
+                <input type="number" id="inches" placeholder="0" oninput="convertLength('inches')">
+            </div>
+            <div class="input-group">
+                <label for="feet">Feet</label>
+                <input type="number" id="feet" placeholder="0" oninput="convertLength('feet')">
+            </div>
+            <div class="divider">=</div>
+            <div class="input-group">
+                <label for="mm">Millimeters</label>
+                <input type="number" id="mm" placeholder="0" oninput="convertLength('mm')">
+            </div>
+            <div class="input-group">
+                <label for="meters">Meters</label>
+                <input type="number" id="meters" placeholder="0" oninput="convertLength('meters')">
+            </div>
+        </section>
+
+        <!-- Weight Section -->
+        <section class="converter-card">
+            <div class="card-header">
+                <div class="icon">⚖️</div>
+                <h2>Weight</h2>
+            </div>
+            <div class="input-group">
+                <label for="lbs">Pounds (lb)</label>
+                <input type="number" id="lbs" placeholder="0" oninput="convertWeight('lbs')">
+            </div>
+            <div class="input-group">
+                <label for="oz">Ounces (oz)</label>
+                <input type="number" id="oz" placeholder="0" oninput="convertWeight('oz')">
+            </div>
+            <div class="divider">=</div>
+            <div class="input-group">
+                <label for="kg">Kilograms</label>
+                <input type="number" id="kg" placeholder="0" oninput="convertWeight('kg')">
+            </div>
+            <div class="input-group">
+                <label for="grams">Grams</label>
+                <input type="number" id="grams" placeholder="0" oninput="convertWeight('grams')">
+            </div>
+        </section>
+
+        <!-- Volume Section -->
+        <section class="converter-card">
+            <div class="card-header">
+                <div class="icon">💧</div>
+                <h2>Volume</h2>
+            </div>
+            <div class="input-group">
+                <label for="gallons">Gallons (US)</label>
+                <input type="number" id="gallons" placeholder="0" oninput="convertVolume('gallons')">
+            </div>
+            <div class="divider">=</div>
+            <div class="input-group">
+                <label for="liters">Liters</label>
+                <input type="number" id="liters" placeholder="0" oninput="convertVolume('liters')">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Part of the Standardisations Initiative</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
